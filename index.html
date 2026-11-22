@@ -3,106 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Автономное энергоснабжение и умный дом | smart-home.site</title>
-    <meta name="description" content="Проектирование и монтаж систем автономного энергоснабжения: солнечные панели, инверторы, LiFePO4 аккумуляторы и программирование умного дома. Сургут, Евпатория.">
+    <title>Smart Home | Инженерный бутик автономных систем</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container header-content">
-            <div class="logo">smart-home<span class="accent">.site</span></div>
-            <nav>
-                <a href="#advantages">Преимущества</a>
-                <a href="#services">Услуги</a>
-                <a href="#contact">Контакты</a>
+
+    <header class="header">
+        <div class="container header-inner">
+            <div class="logo">SMART-HOME<span class="accent">.SITE</span></div>
+            <nav class="nav">
+                <a href="#calculator">Калькулятор</a>
+                <a href="#specs">Характеристики</a>
+                <a href="#process">Процесс</a>
+                <a href="#contacts">Контакты</a>
             </nav>
+            <a href="#contacts" class="btn btn-primary">Оставить заявку</a>
         </div>
     </header>
 
     <section class="hero">
-        <div class="container">
-            <h1>Автономное энергоснабжение <br>дома <span class="accent">под ключ</span></h1>
-            <p class="hero-subtitle">Солнечные панели, гибридные инверторы, накопители LiFePO4 и полная интеграция с системами умного дома. Независимость от сетей и перебоев.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Рассчитать систему</a>
-                <a href="https://wa.me/79000000000" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Написать в WhatsApp</a>
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h1>Энергонезависимость <br><span class="glow">вашего дома</span></h1>
+                <p>Проектирование, сборка и программирование умных систем резервирования и солнечных станций. Полный цикл монтажа нашей инженерной бригадой.</p>
+                <div class="hero-buttons">
+                    <a href="#calculator" class="btn btn-primary">Рассчитать автономию</a>
+                    <a href="#process" class="btn btn-outline">Как мы работаем</a>
+                </div>
+            </div>
+            
+            <!-- Интерактивная визуализация потоков энергии -->
+            <div class="hero-visual">
+                <div class="energy-diagram">
+                    <div class="node solar">
+                        <span class="icon">☀️</span>
+                        <span class="label">Солнце</span>
+                    </div>
+                    <div class="flow flow-1"></div>
+                    <div class="node inverter">
+                        <span class="icon">⚡</span>
+                        <span class="label">Инвертор + Умный контроль</span>
+                    </div>
+                    <div class="flow flow-2"></div>
+                    <div class="node battery">
+                        <span class="icon">🔋</span>
+                        <span class="label">LiFePO4 АКБ</span>
+                    </div>
+                    <div class="flow flow-3"></div>
+                    <div class="node house">
+                        <span class="icon">🏠</span>
+                        <span class="label">Дом (приоритетные нагрузки)</span>
+                    </div>
+                </div>
+                <p class="visual-caption">Интеллектуальное распределение энергии в реальном времени</p>
             </div>
         </div>
     </section>
 
-    <section id="advantages" class="section">
+    <section id="calculator" class="section bg-darker">
         <div class="container">
-            <h2 class="section-title">Почему это выгодно</h2>
-            <div class="grid-3">
-                <div class="card">
-                    <i class="fas fa-bolt card-icon"></i>
-                    <h3>Полная автономность</h3>
-                    <p>Защита от отключений света. Система автоматически переключается на аккумуляторы за миллисекунды.</p>
+            <h2 class="section-title">Калькулятор <span class="accent">автономии</span></h2>
+            <div class="calculator-card">
+                <div class="calc-inputs">
+                    <div class="input-group">
+                        <label>Емкость аккумуляторов (кВт·ч)</label>
+                        <input type="range" id="batteryCap" min="5" max="50" value="32" step="1">
+                        <div class="value-display"><span id="batteryVal">32</span> кВт·ч</div>
+                    </div>
+                    <div class="input-group">
+                        <label>Средняя нагрузка дома (Вт)</label>
+                        <input type="range" id="loadPower" min="100" max="3000" value="500" step="50">
+                        <div class="value-display"><span id="loadVal">500</span> Вт <span class="hint">(свет, котел, холодильник, Wi-Fi)</span></div>
+                    </div>
                 </div>
-                <div class="card">
-                    <i class="fas fa-chart-line card-icon"></i>
-                    <h3>Экономия до 70%</h3>
-                    <p>Снижение счетов за электроэнергию за счёт использования солнечной генерации и ночных тарифов.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-microchip card-icon"></i>
-                    <h3>Умная автоматизация</h3>
-                    <p>Программирование сценариев: дом сам управляет нагрузкой, нагревом и зарядкой АКБ для максимальной эффективности.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="section bg-darker">
-        <div class="container">
-            <h2 class="section-title">Комплекс услуг</h2>
-            <div class="grid-3">
-                <div class="service-card">
-                    <h3>01. Проектирование</h3>
-                    <p>Расчёт мощности, подбор инвертора и ёмкости АКБ под ваши задачи и бюджет.</p>
-                </div>
-                <div class="service-card">
-                    <h3>02. Монтаж и сборка</h3>
-                    <p>Профессиональная сборка щитов, установка инверторов, монтаж аккумуляторных стоек LiFePO4.</p>
-                </div>
-                <div class="service-card">
-                    <h3>03. Программирование</h3>
-                    <p>Настройка контроллеров умного дома, сценариев энергосбережения и удалённого мониторинга.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container about-block">
-            <h2 class="section-title">Обо мне</h2>
-            <p>Электрик-инсталлятор и программист систем умного дома. Специализируюсь на создании надёжных и автономных систем энергоснабжения. Работаю с современными контроллерами, гибридными инверторами и BMS-системами. География работы: <strong>Сургут и Евпатория</strong>.</p>
-        </div>
-    </section>
-
-    <section id="contact" class="section bg-darker">
-        <div class="container">
-            <h2 class="section-title">Связаться со мной</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <p><i class="fas fa-phone accent"></i> <a href="tel:+79000000000">+7 (900) 000-00-00</a></p>
-                    <p><i class="fab fa-telegram accent"></i> <a href="https://t.me/yourusername" target="_blank">@yourusername</a></p>
-                    <p><i class="fas fa-envelope accent"></i> <a href="mailto:info@smart-home.site">info@smart-home.site</a></p>
-                </div>
-                <div class="contact-form">
-                    <p class="form-note">Оставьте заявку, и я перезвоню для бесплатной консультации.</p>
-                    <!-- Здесь можно позже подключить форму (например, Formspree или Telegram-бот) -->
-                    <a href="https://wa.me/79000000000" class="btn btn-primary full-width">Написать в WhatsApp</a>
+                <div class="calc-result">
+                    <div class="result-label">Время автономной работы:</div>
+                    <div class="result-value"><span id="autonomyHours">54</span> часа</div>
+                    <div class="result-sub">~ <span id="autonomyDays">2.2</span> суток без подзарядки</div>
+                    <p class="calc-note">* Расчет включает КПД инвертора (90%) и глубину разряда LiFePO4 (80%) для сохранения ресурса.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <section id="specs" class="section">
         <div class="container">
-            <p>© 2026 smart-home.site. Автономные системы и умный дом.</p>
+            <h2 class="section-title">Технические <span class="accent">преимущества</span></h2>
+            <div class="bento-grid">
+                <div class="bento-card large">
+                    <h3>⚡ Переключение < 10 мс</h3>
+                    <p>Бесшовный переход на аккумуляторы. Компьютеры, роутеры и газовые котлы не перезагружаются и продолжают работать без сбоев.</p>
+                </div>
+                <div class="bento-card">
+                    <h3>🔋 6000+ циклов</h3>
+                    <p>Аккумуляторы LiFePO4 с ресурсом более 15 лет ежедневной эксплуатации без деградации емкости.</p>
+                </div>
+                <div class="bento-card">
+                    <h3>🛡️ Защита IP65</h3>
+                    <p>Уличное исполнение инверторов и герметичные боксы для работы в условиях влажного климата Юга России.</p>
+                </div>
+                <div class="bento-card wide">
+                    <h3>🧠 Умный сброс нагрузки</h3>
+                    <p>Программируемая автоматика (Wiren Board / ОВЕН) сама отключает бойлер и бассейн при блэкауте, экономя заряд АКБ для критически важных систем на 2–3 суток.</p>
+                </div>
+                <div class="bento-card">
+                    <h3>📈 Масштабируемость</h3>
+                    <p>Система легко расширяется: добавьте еще АКБ или солнечные панели без замены основного оборудования.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="section bg-darker">
+        <div class="container">
+            <h2 class="section-title">Как мы <span class="accent">работаем</span></h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>Проект и смета</h3>
+                    <p>Удалённо разрабатываю проект, подбираю оборудование и составляю прозрачную смету. Фиксируем цену в договоре.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>Подготовка объекта</h3>
+                    <p>Вы готовите объект по нашему чек-листу: прокладка кабелей и подготовка места под щит.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>Выезд бригады</h3>
+                    <p>Наша инженерная бригада прилетает на 3–5 дней. Полный цикл: сборка щита, монтаж и программирование.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <h3>Сдача и поддержка</h3>
+                    <p>Тестирование системы, обучение работе с приложением и удалённая техническая поддержка.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="section">
+        <div class="container contacts-content">
+            <h2 class="section-title">Обсудить <span class="accent">проект</span></h2>
+            <p class="contacts-subtitle">Напишите в удобный мессенджер. Отвечаю в течение 2 часов в рабочее время.</p>
+            <div class="contacts-links">
+                <a href="https://t.me/username" class="btn btn-primary btn-large">Telegram</a>
+                <a href="https://max.ru/username" class="btn btn-outline btn-large">VK Мессенджер (Макс)</a>
+            </div>
+            <p class="contacts-note">Телефонные звонки не принимаются — только текстовая связь для фиксации технических деталей.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Smart-Home.site. Инженерный бутик автономных систем.</p>
         </div>
     </footer>
+
+    <script>
+        // Логика калькулятора автономии
+        const batterySlider = document.getElementById('batteryCap');
+        const loadSlider = document.getElementById('loadPower');
+        const batteryVal = document.getElementById('batteryVal');
+        const loadVal = document.getElementById('loadVal');
+        const autonomyHours = document.getElementById('autonomyHours');
+        const autonomyDays = document.getElementById('autonomyDays');
+
+        function calculate() {
+            const capacity = parseInt(batterySlider.value);
+            const load = parseInt(loadSlider.value);
+            
+            batteryVal.textContent = capacity;
+            loadVal.textContent = load;
+
+            // Формула: (Емкость * 1000 * 0.9 (КПД инвертора) * 0.8 (глубина разряда)) / Нагрузка
+            const usableEnergy = capacity * 1000 * 0.9 * 0.8;
+            const hours = (usableEnergy / load).toFixed(1);
+            const days = (hours / 24).toFixed(1);
+
+            autonomyHours.textContent = hours;
+            autonomyDays.textContent = days;
+        }
+
+        batterySlider.addEventListener('input', calculate);
+        loadSlider.addEventListener('input', calculate);
+        
+        // Инициализация
+        calculate();
+    </script>
 </body>
 </html>
